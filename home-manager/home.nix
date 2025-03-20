@@ -20,8 +20,13 @@
     pkgs.jq
     pkgs.just
     pkgs.krita
+    pkgs.kdePackages.kalk
+    pkgs.kdePackages.kmail
+    pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
+    pkgs.kdePackages.korganizer
     pkgs.kdePackages.kdeconnect-kde
+    pkgs.kdePackages.kaccounts-providers   pkgs.kdePackages.kaccounts-integration
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
     pkgs.mpv
@@ -32,6 +37,7 @@
     pkgs.rainfrog
     pkgs.ripgrep-all
     pkgs.unzip
+    pkgs.umu-launcher
     pkgs.wget
   ];
 
