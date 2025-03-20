@@ -28,8 +28,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices."luks-c6aca288-6a62-4c22-8fc2-949a4a9c7bad".device =
     "/dev/disk/by-uuid/c6aca288-6a62-4c22-8fc2-949a4a9c7bad";
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  services.scx.enable = true;
+  # Switch to default kernel due to regressions
+  # boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  # services.scx.enable = true;g
 
   # Networking stuff.
   networking.hostName = "dell";
