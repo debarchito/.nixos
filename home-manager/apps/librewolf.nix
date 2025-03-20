@@ -1,0 +1,87 @@
+{ config, pkgs, ... }:
+
+{
+  programs.librewolf = {
+    enable = true;
+    package = config.lib.nixGL.wrapOffload pkgs.librewolf;
+    profiles.debarchito = {
+      isDefault = true;
+      search.engines = {
+        "Nix Packages" = {
+          urls = [
+            {
+              template = "https://search.nixos.org/packages";
+              params = [
+                {
+                  name = "type";
+                  value = "packages";
+                }
+                {
+                  name = "query";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+          icon = "https://nixos.wiki/favicon.png";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@np" ];
+        };
+        "NixOS Wiki" = {
+          urls = [ { template = "https://nixos.wiki/index.php?search={searchTerms}"; } ];
+          icon = "https://nixos.wiki/favicon.png";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@nw" ];
+        };
+        "Arch Wiki" = {
+          urls = [ { template = "https://wiki.archlinux.org/index.php?search={searchTerms}"; } ];
+          icon = "https://wiki.archlinux.org/favicon.ico";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@aw" ];
+        };
+        "SearXNG" = {
+          urls = [ { template = "https://search.inetol.net/search?q={searchTerms}"; } ];
+          icon = "https://search.inetol.net/favicon.ico";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@sr" ];
+        };
+        "bing".metaData.hidden = true;
+      };
+      search.default = "SearXNG";
+      search.force = true;
+      extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+        bitwarden
+        clearurls
+        darkreader
+        decentraleyes
+        foxytab
+        firefox-color
+        fastforwardteam
+        foxyproxy-standard
+        firefox-translations
+        privacy-badger
+        read-aloud
+        return-youtube-dislikes
+        sponsorblock
+        stylus
+        tabliss
+        ublock-origin
+        user-agent-string-switcher
+        violentmonkey
+        web-archives
+      ];
+      settings = {
+        "places.history.enabled" = false;
+        "layout.css.has-selector.enabled" = true;
+        "svg.context-properties.content.enabled" = true;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "media.ffmpeg.vaapi.enabled" = true;
+        "gfx.webrender.all" = true;
+        "widget.gtk.non-native-titlebar-buttons.enabled" = true;
+        "widget.gtk.titlebar-action-middle-click-enabled" = true;
+      };
+      userChrome = builtins.readFile ./librewolf/userChrome.css;
+      userContent = builtins.readFile ./librewolf/userContent.css;
+    };
+  };
+}
