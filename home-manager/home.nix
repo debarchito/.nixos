@@ -41,6 +41,7 @@
     pkgs.unzip
     pkgs.umu-launcher
     pkgs.wget
+    pkgs.youtube-music
   ];
 
   # Let home-manager update itself.
