@@ -15,6 +15,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +32,7 @@
       home-manager,
       nur,
       plasma-manager,
+      nix-ld,
       aagl,
       ...
     }@inputs:
@@ -47,11 +52,13 @@
         modules = [
           ./hosts/dell/configuration.nix
           chaotic.nixosModules.default
+          nix-ld.nixosModules.nix-ld
           {
             imports = [ aagl.nixosModules.default ];
             nix.settings = aagl.nixConfig;
             programs.anime-game-launcher.enable = true;
             programs.honkers-railway-launcher.enable = true;
+            programs.nix-ld.dev.enable = true;
           }
         ];
       };
