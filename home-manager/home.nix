@@ -26,7 +26,6 @@
     pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
     pkgs.kdePackages.korganizer
-    pkgs.kdePackages.kdeconnect-kde
     pkgs.kdePackages.kde-gtk-config
     pkgs.kdePackages.kaccounts-providers
     pkgs.kdePackages.kaccounts-integration
@@ -56,6 +55,7 @@
   imports = [
     ./desktop/plasma.nix
     ./apps/ghostty.nix
+    ./apps/kdeconnect.nix
     ./apps/librewolf.nix
     ./tools/bat.nix
     ./tools/direnv.nix
