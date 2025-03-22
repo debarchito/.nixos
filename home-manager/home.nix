@@ -14,6 +14,7 @@
     pkgs.erdtree
     pkgs.fd
     pkgs.ffmpeg
+    pkgs.ferium
     pkgs.inkscape
     pkgs.inotify-tools
     pkgs.jetbrains.idea-ultimate
@@ -34,6 +35,7 @@
     pkgs.mpv
     pkgs.nixfmt-rfc-style
     pkgs.obs-studio
+    pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.ripgrep
     pkgs.rainfrog
