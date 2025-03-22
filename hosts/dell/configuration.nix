@@ -19,8 +19,16 @@
 
   # Cachix
   nix.settings = {
-    substituters = [ "https://chaotic-nyx.cachix.org/" ];
-    trusted-public-keys = [ "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8=" ];
+    substituters = [
+      "https://ezkea.cachix.org"
+      "https://devenv.cachix.org"
+      "https://chaotic-nyx.cachix.org"
+    ];
+    trusted-public-keys = [
+      "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+      "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
+    ];
   };
 
   # Boot stuff.
@@ -37,7 +45,12 @@
     hostName = "dell";
     networkmanager.enable = true;
     firewall = rec {
-      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+      allowedTCPPortRanges = [
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
       allowedUDPPortRanges = allowedTCPPortRanges;
     };
   };
