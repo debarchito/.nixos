@@ -111,9 +111,6 @@
     ];
   };
 
-  # Enable flatpaks.
-  services.flatpak.enable = true;
-
   # Podman stuff.
   virtualisation.containers.enable = true;
   virtualisation.podman = {

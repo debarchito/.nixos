@@ -8,6 +8,7 @@
       format = lib.concatStrings [
         "$username"
         "$hostname"
+        "$os"
         "$directory"
         "$git_branch"
         "$git_state"
@@ -18,6 +19,14 @@
         "$python"
         "$character"
       ];
+      os = {
+        disabled = false;
+        symbols = {
+          Arch = "󰣇 ";
+          NixOS = "󱄅 ";
+        };
+        style = "bold #cba6f7";
+      };
       directory.style = "#cba6f7";
       line_break.disabled = true;
       character = {
