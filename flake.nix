@@ -22,7 +22,6 @@
   };
   outputs =
     {
-      self,
       nixpkgs,
       chaotic,
       home-manager,

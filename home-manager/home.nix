@@ -34,6 +34,7 @@
     pkgs.libreoffice-qt-fresh
     pkgs.mpv
     pkgs.marksman
+    pkgs.nixd
     pkgs.nixfmt-rfc-style
     pkgs.obs-studio
     pkgs.prismlauncher
