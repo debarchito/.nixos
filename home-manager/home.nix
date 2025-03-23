@@ -7,6 +7,7 @@
   home.stateVersion = "24.11"; # DO NOT CHANGE!
   home.packages = [
     pkgs.blender
+    pkgs.deno
     pkgs.distrobox
     pkgs.devenv
     pkgs.eza
@@ -32,6 +33,7 @@
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
     pkgs.mpv
+    pkgs.marksman
     pkgs.nixfmt-rfc-style
     pkgs.obs-studio
     pkgs.prismlauncher
@@ -39,10 +41,14 @@
     pkgs.ripgrep
     pkgs.rainfrog
     pkgs.ripgrep-all
+    pkgs.taplo
     pkgs.unzip
     pkgs.umu-launcher
+    pkgs.vscode-langservers-extracted
     pkgs.wget
+    pkgs.wl-clipboard
     pkgs.youtube-music
+    pkgs.yaml-language-server
   ];
 
   # Let home-manager update itself.
