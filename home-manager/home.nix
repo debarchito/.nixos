@@ -22,7 +22,7 @@
     pkgs.jq
     pkgs.just
     pkgs.krita
-    pkgs.kdePackages.kalk
+    pkgs.kdePackages.kcalc
     pkgs.kdePackages.kmail
     pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
