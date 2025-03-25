@@ -36,6 +36,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices."luks-c6aca288-6a62-4c22-8fc2-949a4a9c7bad".device =
     "/dev/disk/by-uuid/c6aca288-6a62-4c22-8fc2-949a4a9c7bad";
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
   # Switch to default kernel due to regressions
   # boot.kernelPackages = pkgs.linuxPackages_cachyos;
   # services.scx.enable = true;g
@@ -127,6 +128,7 @@
       "wheel"
       "audio"
       "bluetooth"
+      "libvirtd"
     ];
   };
 
@@ -136,5 +138,25 @@
     enable = true;
     dockerCompat = true;
     defaultNetwork.settings.dns_enabled = true;
+  };
+
+  # Libvirtd
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [
+          (pkgs.OVMF.override {
+            secureBoot = true;
+            tpmSupport = true;
+          }).fd
+        ];
+      };
+      vhostUserPackages = [ pkgs.virtiofsd ];
+    };
   };
 }

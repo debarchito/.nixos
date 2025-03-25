@@ -39,6 +39,7 @@
     pkgs.obs-studio
     pkgs.prismlauncher
     pkgs.podman-compose
+    pkgs.quickemu
     pkgs.ripgrep
     pkgs.rainfrog
     pkgs.ripgrep-all
