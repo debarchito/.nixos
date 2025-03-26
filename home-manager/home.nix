@@ -6,6 +6,7 @@
   home.homeDirectory = "/home/debarchito";
   home.stateVersion = "24.11"; # DO NOT CHANGE!
   home.packages = [
+    # programs
     pkgs.blender
     pkgs.deno
     pkgs.distrobox
@@ -51,7 +52,12 @@
     pkgs.wl-clipboard
     pkgs.youtube-music
     pkgs.yaml-language-server
+    # fonts
+    pkgs.nerd-fonts.jetbrains-mono
   ];
+
+  # Fontconfig styff.
+  fonts.fontconfig.enable = true;
 
   # Let home-manager update itself.
   programs.home-manager.enable = true;
