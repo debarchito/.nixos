@@ -1,31 +1,40 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.librewolf = {
     enable = true;
-    package = config.lib.nixGL.wrapOffload pkgs.librewolf;
     profiles.debarchito = {
       isDefault = true;
       search.engines = {
-        "Nix Packages" = {
+        "NixOS Search - Packages" = {
           urls = [
             {
-              template = "https://search.nixos.org/packages";
-              params = [
-                {
-                  name = "type";
-                  value = "packages";
-                }
-                {
-                  name = "query";
-                  value = "{searchTerms}";
-                }
-              ];
+              template = "https://search.nixos.org/packages?channel=unstable&type=packages&query={searchTerms}";
             }
           ];
           icon = "https://nixos.wiki/favicon.png";
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@np" ];
+        };
+        "NixOS Search - Options" = {
+          urls = [
+            {
+              template = "https://search.nixos.org/options?channel=unstable&type=packages&query={searchTerms}";
+            }
+          ];
+          icon = "https://nixos.wiki/favicon.png";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@no" ];
+        };
+        "Home Manager - Option Search" = {
+          urls = [
+            {
+              template = "https://home-manager-options.extranix.com/?release=master&query={searchTerms}";
+            }
+          ];
+          icon = "https://home-manager-options.extranix.com/images/favicon.png";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@ho" ];
         };
         "NixOS Wiki" = {
           urls = [ { template = "https://nixos.wiki/index.php?search={searchTerms}"; } ];
@@ -39,13 +48,12 @@
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@aw" ];
         };
-        "SearXNG" = {
+        SearXNG = {
           urls = [ { template = "https://search.inetol.net/search?q={searchTerms}"; } ];
           icon = "https://search.inetol.net/favicon.ico";
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@sr" ];
         };
-        "bing".metaData.hidden = true;
       };
       search.default = "SearXNG";
       search.force = true;

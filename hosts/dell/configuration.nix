@@ -3,33 +3,27 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/common-settings.nix
+    ../../modules/trusted-substituters.nix
+    ../../modules/security.nix
+    ../../modules/bluetooth.nix
+    ../../modules/pipewire.nix
+    ../../modules/podman.nix
+    ../../modules/libvirtd.nix
   ];
-  system.stateVersion = "24.11"; # DO NOT CHANGE!
 
-  # Some Nix-related settings.
+  # Some stuff that should exist independently.
+  system.stateVersion = "24.11";
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-  nix.gc.automatic = true;
-  nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 10d";
-  nix.settings.auto-optimise-store = true;
 
-  # Cachix
-  nix.settings = {
-    substituters = [
-      "https://ezkea.cachix.org"
-      "https://devenv.cachix.org"
-      "https://chaotic-nyx.cachix.org"
-    ];
-    trusted-public-keys = [
-      "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-      "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
-    ];
-  };
+  # Use the imported modules.
+  common-settings.enable = true;
+  trusted-substituters.enable = true;
+  security.enable = true;
+  bluetooth.enable = true;
+  pipewire.enable = true;
+  podman.enable = true;
+  libvirtd.enable = true;
 
   # Boot stuff.
   boot.loader.systemd-boot.enable = true;
@@ -54,17 +48,6 @@
         }
       ];
       allowedUDPPortRanges = allowedTCPPortRanges;
-    };
-  };
-
-  # Bluetooth stuff.
-  hardware.bluetooth = {
-    enable = true;
-    settings = {
-      General = {
-        Experimental = true;
-        Enable = "Source,Sink,Media,Socket";
-      };
     };
   };
 
@@ -110,16 +93,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
-    jack.enable = true;
-    wireplumber.enable = true;
-  };
-
   # Me!
   users.users.debarchito = {
     isNormalUser = true;
@@ -131,33 +104,5 @@
       "bluetooth"
       "libvirtd"
     ];
-  };
-
-  # Podman stuff.
-  virtualisation.containers.enable = true;
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
-  };
-
-  # Libvirtd
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd
-        ];
-      };
-      vhostUserPackages = [ pkgs.virtiofsd ];
-    };
   };
 }
