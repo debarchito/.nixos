@@ -41,6 +41,7 @@
       cd = "z";
       tree = "erd";
       t = "true && clear";
+      run = "nix run nixpkgs#";
       ls = "eza --long --color=always";
       ll = "eza --long --color=always -l";
       la = "eza --long --color=always -a";
