@@ -4,6 +4,7 @@
   options.common-settings.enable = lib.mkEnableOption "common settings that can be utilized for multiple hosts";
 
   config = lib.mkIf config.common-settings.enable {
+    services.printing.enable = true;
     nix.settings = {
       experimental-features = [
         "nix-command"

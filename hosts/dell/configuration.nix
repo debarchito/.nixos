@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -6,24 +6,44 @@
     ../../modules/common-settings.nix
     ../../modules/trusted-substituters.nix
     ../../modules/security.nix
+    ../../modules/netmod.nix
     ../../modules/bluetooth.nix
     ../../modules/pipewire.nix
+    ../../modules/graphics.nix
     ../../modules/podman.nix
-    ../../modules/libvirtd.nix
+    ../../modules/vm.nix
   ];
 
   # Some stuff that should exist independently.
   system.stateVersion = "24.11";
   nixpkgs.config.allowUnfree = true;
 
-  # Use the imported modules.
+  # Miscellaneous stuff.
   common-settings.enable = true;
   trusted-substituters.enable = true;
   security.enable = true;
+
+  # Networking stuff.
+  netmod.enable = true;
+  netmod.name = "dell";
+
+  # Media stuff.
   bluetooth.enable = true;
   pipewire.enable = true;
+
+  # Graphics stuff.
+  graphics.enable = true;
+  graphics.nvidia.enable = true;
+  graphics.nvidia.prime.enable = true;
+  graphics.nvidia.prime = {
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
+
+  # Virtualization stuff.
   podman.enable = true;
-  libvirtd.enable = true;
+  vm.enable = true;
+  vm.kvm.enable = true;
 
   # Boot stuff.
   boot.loader.systemd-boot.enable = true;
@@ -35,21 +55,6 @@
   # boot.kernelPackages = pkgs.linuxPackages_cachyos;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   # services.scx.enable = true;
-
-  # Networking stuff.
-  networking = {
-    hostName = "dell";
-    networkmanager.enable = true;
-    firewall = rec {
-      allowedTCPPortRanges = [
-        {
-          from = 1714;
-          to = 1764;
-        }
-      ];
-      allowedUDPPortRanges = allowedTCPPortRanges;
-    };
-  };
 
   # Localization stuff.
   time.timeZone = "Asia/Kolkata";
@@ -74,24 +79,6 @@
   services.desktopManager.plasma6.enable = true;
   services.libinput.enable = true;
   programs.xwayland.enable = true;
-
-  # NVIDIA stuff.
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
-    prime = {
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
-  };
-
-  # OpenGL stuff.
-  hardware.graphics.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Me!
   users.users.debarchito = {
