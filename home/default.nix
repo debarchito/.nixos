@@ -67,20 +67,19 @@
 
   # Modules.
   imports = [
-    ./desktop/plasma.nix
-    ./apps/ghostty.nix
-    ./apps/kdeconnect.nix
-    ./apps/librewolf.nix
-    ./tools/bat.nix
-    ./tools/direnv.nix
-    ./tools/fzf.nix
-    ./tools/fish.nix
-    ./tools/gpg.nix
-    ./tools/git.nix
-    ./tools/helix.nix
-    ./tools/starship.nix
-    ./tools/yazi.nix
-    ./tools/zoxide.nix
-    ./tools/zellij.nix
+    ./ghostty.nix
+    ./kdeconnect.nix
+    ./librewolf.nix
+    ./bat.nix
+    ./direnv.nix
+    ./fzf.nix
+    ./fish.nix
+    ./gpg.nix
+    ./git.nix
+    ./helix.nix
+    ./starship.nix
+    ./yazi.nix
+    ./zoxide.nix
+    ./zellij.nix
   ];
 }

@@ -51,10 +51,7 @@
   boot.initrd.luks.devices."luks-c6aca288-6a62-4c22-8fc2-949a4a9c7bad".device =
     "/dev/disk/by-uuid/c6aca288-6a62-4c22-8fc2-949a4a9c7bad";
   boot.extraModprobeConfig = "options kvm_intel nested=1";
-  # Don't use cachyos kernel due to regressions
-  # boot.kernelPackages = pkgs.linuxPackages_cachyos;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  # services.scx.enable = true;
 
   # Localization stuff.
   time.timeZone = "Asia/Kolkata";
