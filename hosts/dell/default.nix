@@ -87,6 +87,7 @@
       "audio"
       "bluetooth"
       "libvirtd"
+      "kvm"
     ];
   };
 }

@@ -12,7 +12,7 @@
               template = "https://search.nixos.org/packages?channel=unstable&type=packages&query={searchTerms}";
             }
           ];
-          icon = "https://nixos.wiki/favicon.png";
+          icon = "https://wiki.nixos.org/nixos.png";
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@np" ];
         };
@@ -22,7 +22,7 @@
               template = "https://search.nixos.org/options?channel=unstable&type=packages&query={searchTerms}";
             }
           ];
-          icon = "https://nixos.wiki/favicon.png";
+          icon = "https://wiki.nixos.org/nixos.png";
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@no" ];
         };
@@ -37,8 +37,8 @@
           definedAliases = [ "@ho" ];
         };
         "NixOS Wiki" = {
-          urls = [ { template = "https://nixos.wiki/index.php?search={searchTerms}"; } ];
-          icon = "https://nixos.wiki/favicon.png";
+          urls = [ { template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; } ];
+          icon = "https://wiki.nixos.org/nixos.png";
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@nw" ];
         };
