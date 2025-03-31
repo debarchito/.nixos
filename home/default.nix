@@ -24,13 +24,9 @@
     pkgs.just
     pkgs.krita
     pkgs.kdePackages.kcalc
-    pkgs.kdePackages.kmail
     pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
-    pkgs.kdePackages.korganizer
     pkgs.kdePackages.kde-gtk-config
-    pkgs.kdePackages.kaccounts-providers
-    pkgs.kdePackages.kaccounts-integration
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
     pkgs.mpv
@@ -42,9 +38,9 @@
     pkgs.podman-compose
     pkgs.quickemu
     pkgs.ripgrep
-    pkgs.rainfrog
     pkgs.ripgrep-all
     pkgs.taplo
+    pkgs.thunderbird
     pkgs.unzip
     pkgs.umu-launcher
     pkgs.vscode-langservers-extracted
