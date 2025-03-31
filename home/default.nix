@@ -23,7 +23,6 @@
     pkgs.jq
     pkgs.just
     pkgs.krita
-    pkgs.kdePackages.kcalc
     pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
     pkgs.kdePackages.kde-gtk-config
