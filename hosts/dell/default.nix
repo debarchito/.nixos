@@ -68,6 +68,9 @@
   vm.enable = true;
   vm.kvm.enable = true;
 
+  # Flatpak stuff.
+  services.flatpak.enable = true;
+
   # Boot stuff.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

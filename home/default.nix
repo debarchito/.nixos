@@ -32,7 +32,6 @@
     pkgs.marksman
     pkgs.nixd
     pkgs.nixfmt-rfc-style
-    pkgs.obs-studio
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
@@ -70,6 +69,7 @@
     ./direnv.nix
     ./fzf.nix
     ./fish.nix
+    ./flatpak.nix
     ./gpg.nix
     ./git.nix
     ./helix.nix
