@@ -18,6 +18,14 @@
   system.stateVersion = "24.11";
   nixpkgs.config.allowUnfree = true;
 
+  # Fine-grained boot stuff.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.luks.devices."luks-c6aca288-6a62-4c22-8fc2-949a4a9c7bad".device =
+    "/dev/disk/by-uuid/c6aca288-6a62-4c22-8fc2-949a4a9c7bad";
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Fine-grained localization stuff.
   time.timeZone = "Asia/Kolkata";
   i18n.supportedLocales = [
@@ -54,6 +62,11 @@
   bluetooth.enable = true;
   pipewire.enable = true;
 
+  # Display Manager stuff.
+  services.xserver.videoDrivers = [ "nvidia" ];
+  services.displayManager.ly.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
   # Graphics stuff.
   graphics.enable = true;
   graphics.nvidia.enable = true;
@@ -70,24 +83,6 @@
 
   # Flatpak stuff.
   services.flatpak.enable = true;
-
-  # Boot stuff.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.luks.devices."luks-c6aca288-6a62-4c22-8fc2-949a4a9c7bad".device =
-    "/dev/disk/by-uuid/c6aca288-6a62-4c22-8fc2-949a4a9c7bad";
-  boot.extraModprobeConfig = "options kvm_intel nested=1";
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # Localization stuff.
-  # Dislay Manager stuff.
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  services.libinput.enable = true;
-  programs.xwayland.enable = true;
 
   # Me!
   users.users.debarchito = {
