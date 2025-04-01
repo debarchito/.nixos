@@ -12,6 +12,10 @@
         appId = "com.obsproject.Studio";
         origin = "flathub";
       }
+      {
+        appId = "md.obsidian.Obsidian";
+        origin = "flathub";
+      }
     ];
     update.auto.enable = true;
     update.auto.onCalendar = "daily";
