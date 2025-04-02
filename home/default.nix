@@ -11,12 +11,12 @@
     pkgs.deno
     pkgs.distrobox
     pkgs.devenv
-    pkgs.eza
     pkgs.fd
     pkgs.erdtree
     pkgs.fd
     pkgs.ffmpeg
     pkgs.ferium
+    pkgs.gitu
     pkgs.inkscape
     pkgs.inotify-tools
     pkgs.jetbrains.idea-ultimate
@@ -51,7 +51,7 @@
     pkgs.nerd-fonts.jetbrains-mono
   ];
 
-  # Fontconfig styff.
+  # Fontconfig stuff.
   fonts.fontconfig.enable = true;
 
   # Let home-manager update itself.
@@ -62,6 +62,7 @@
 
   # Modules.
   imports = [
+    ./eza.nix
     ./ghostty.nix
     ./kdeconnect.nix
     ./librewolf.nix
@@ -73,6 +74,7 @@
     ./gpg.nix
     ./git.nix
     ./helix.nix
+    ./nushell.nix
     ./starship.nix
     ./yazi.nix
     ./zoxide.nix

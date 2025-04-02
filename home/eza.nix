@@ -1,7 +1,7 @@
 {
-  programs.direnv = {
+  programs.eza = {
     enable = true;
-    nix-direnv.enable = true;
+    enableFishIntegration = true;
     enableNushellIntegration = true;
   };
 }
