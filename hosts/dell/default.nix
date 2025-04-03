@@ -70,7 +70,6 @@
     pkgs.kdePackages.discover
     pkgs.kdePackages.elisa
     pkgs.kdePackages.kate
-    pkgs.kdePackages.konsole
   ];
 
   # Graphics stuff.
