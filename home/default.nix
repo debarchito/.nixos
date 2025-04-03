@@ -9,8 +9,9 @@
     # programs
     pkgs.blender
     pkgs.deno
-    pkgs.distrobox
     pkgs.devenv
+    pkgs.duckdb
+    pkgs.distrobox
     pkgs.fd
     pkgs.erdtree
     pkgs.fd
