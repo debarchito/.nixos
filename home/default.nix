@@ -12,7 +12,7 @@
       accents = [ "mauve" ];
       winDecStyles = [ "classic" ];
     })
-    pkgs.catppuccin-cursors.mochaDark
+    pkgs.bibata-cursors
     # programs
     pkgs.blender
     pkgs.deno
