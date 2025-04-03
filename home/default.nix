@@ -46,7 +46,7 @@
     pkgs.wl-clipboard
     pkgs.youtube-music
     pkgs.yaml-language-server
-    pkgs.zed-editor
+    pkgs.zed-editor-fhs
     # fonts
     pkgs.nerd-fonts.jetbrains-mono
   ];
