@@ -137,7 +137,8 @@
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
-        "nur": "nur"
+        "nur": "nur",
+        "treefmt-nix": "treefmt-nix_2"
       }
     },
     "treefmt-nix": {
@@ -153,6 +154,26 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "rev": "49717b5af6f80172275d47a418c9719a31a78b53",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "treefmt-nix_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1743589519,
+        "narHash": "sha256-iBzr7Zb11nQxwX90bO1+Bm1MGlhMSmu4ixgnQFB+j4E=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "18bed671738e36c5504e188aadc18b7e2a6e408f",
         "type": "github"
       },
       "original": {

@@ -14,14 +14,20 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
+      self,
       nixpkgs,
       nix-flatpak,
       home-manager,
       nur,
       aagl,
+      treefmt-nix,
       ...
     }@inputs:
     let
@@ -32,9 +38,11 @@
           nur.overlays.default
         ];
       };
+      treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
-      formatter.${system} = pkgs.treefmt;
+      formatter.${system} = treefmtEval.config.build.wrapper;
+      checks.${system}.formatting = treefmtEval.config.build.check self;
       nixosConfigurations.dell = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [

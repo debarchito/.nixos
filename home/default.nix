@@ -33,7 +33,7 @@
     pkgs.mpv
     pkgs.marksman
     pkgs.nixd
-    pkgs.nixfmt-rfc-style
+    pkgs.nixfmt
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu

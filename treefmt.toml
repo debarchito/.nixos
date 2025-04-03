@@ -1,3 +1,0 @@
-[formatter.nixfmt]
-command = "nixfmt"
-includes = ["*.nix"]
