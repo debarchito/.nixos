@@ -26,6 +26,7 @@
     pkgs.krita
     pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
+    pkgs.kdePackages.filelight
     pkgs.kdePackages.kde-gtk-config
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
