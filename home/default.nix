@@ -6,6 +6,13 @@
   home.homeDirectory = "/home/debarchito";
   home.stateVersion = "24.11"; # DO NOT CHANGE!
   home.packages = [
+    # themes and icons
+    (pkgs.catppuccin-kde.override {
+      flavour = [ "mocha" ];
+      accents = [ "mauve" ];
+      winDecStyles = [ "classic" ];
+    })
+    pkgs.catppuccin-cursors.mochaDark
     # programs
     pkgs.blender
     pkgs.deno
@@ -33,7 +40,7 @@
     pkgs.mpv
     pkgs.marksman
     pkgs.nixd
-    pkgs.nixfmt
+    pkgs.nixfmt-rfc-style
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
@@ -61,6 +68,10 @@
 
   # Allow unfree.
   nixpkgs.config.allowUnfree = true;
+
+  # Catppuccin!
+  catppuccin.flavor = "mocha";
+  catppuccin.enable = true;
 
   # Modules.
   imports = [

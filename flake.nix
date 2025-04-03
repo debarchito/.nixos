@@ -18,6 +18,7 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
   outputs =
     {
@@ -28,6 +29,7 @@
       nur,
       aagl,
       treefmt-nix,
+      catppuccin,
       ...
     }@inputs:
     let
@@ -58,6 +60,7 @@
       homeConfigurations.debarchito = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          catppuccin.homeModules.catppuccin
           nix-flatpak.homeManagerModules.nix-flatpak
           ./home
         ];
