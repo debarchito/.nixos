@@ -80,6 +80,7 @@
   podman.enable = true;
   vm.enable = true;
   vm.kvm.enable = true;
+  vm.waydroid.enable = true;
 
   # Flatpak stuff.
   services.flatpak.enable = true;
