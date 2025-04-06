@@ -12,6 +12,7 @@
     ../../modules/graphics.nix
     ../../modules/podman.nix
     ../../modules/vm.nix
+    ../../modules/sunshine.nix
   ];
 
   # Some stuff that should exist independently.
@@ -81,6 +82,9 @@
   vm.enable = true;
   vm.kvm.enable = true;
   vm.waydroid.enable = true;
+
+  # Sunshine (and Moonlight) stuff.
+  sunshine.enable = true;
 
   # Flatpak stuff.
   services.flatpak.enable = true;
