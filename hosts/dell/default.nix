@@ -67,6 +67,11 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
+  environment.plasma6.excludePackages = [
+    pkgs.kdePackages.discover
+    pkgs.kdePackages.elisa
+    pkgs.kdePackages.kate
+  ];
 
   # Graphics stuff.
   graphics.enable = true;
