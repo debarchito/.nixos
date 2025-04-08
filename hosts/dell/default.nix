@@ -19,6 +19,9 @@
   system.stateVersion = "24.11";
   nixpkgs.config.allowUnfree = true;
 
+  # Firmware stuff.
+  services.fwupd.enable = true;
+
   # Fine-grained boot stuff.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
