@@ -97,6 +97,10 @@
   # Flatpak stuff.
   services.flatpak.enable = true;
 
+  # AppImage stuff.
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
   # Me!
   users.users.debarchito = {
     isNormalUser = true;
