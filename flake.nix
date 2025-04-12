@@ -27,7 +27,6 @@
       nix-flatpak,
       home-manager,
       nur,
-      aagl,
       treefmt-nix,
       catppuccin,
       ...
@@ -49,12 +48,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/dell
-          {
-            imports = [ aagl.nixosModules.default ];
-            nix.settings = aagl.nixConfig;
-            programs.anime-game-launcher.enable = true;
-            programs.honkers-railway-launcher.enable = true;
-          }
+          ./games
         ];
       };
       homeConfigurations.debarchito = home-manager.lib.homeManagerConfiguration {
