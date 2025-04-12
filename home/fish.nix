@@ -41,6 +41,7 @@
       cd = "z";
       tree = "erd";
       run = "nix run nixpkgs#";
+      rp = "kwin_wayland --replace & plasmashell --replace &";
     };
   };
 }
