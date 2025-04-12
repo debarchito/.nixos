@@ -45,25 +45,17 @@
     functions = {
       run = ''
         if test (count $argv) -eq 0
-          echo "Usage: run <package> [--<args>]"
+          echo "Usage: run <package> [<args>]"
           return 1
         end
-
-        set package $argv[1]
-        set args $argv[2..-1]
-
-        nix run nixpkgs#$package -- $args
+        nix run nixpkgs#$argv[1] -- $argv[2..-1]
       '';
       run_unfree = ''
         if test (count $argv) -eq 0
-          echo "Usage: run_unfree <package> [--<args>]"
+          echo "Usage: run_unfree <package> [<args>]"
           return 1
         end
-
-        set package $argv[1]
-        set args $argv[2..-1]
-
-        NIXPKGS_ALLOW_UNFREE=1 nix run --impure nixpkgs#$package -- $args
+        NIXPKGS_ALLOW_UNFREE=1 nix run --impure nixpkgs#$argv[1] -- $argv[2..-1]
       '';
     };
   };
