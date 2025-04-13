@@ -48,6 +48,7 @@
     pkgs.quickemu
     pkgs.ripgrep
     pkgs.ripgrep-all
+    pkgs.scrcpy
     pkgs.taplo
     pkgs.thunderbird
     pkgs.unzip
