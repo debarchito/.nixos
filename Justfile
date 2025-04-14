@@ -3,7 +3,7 @@ alias hs := home-switch
 home-switch:
     nix run home-manager/master -- switch --flake .
 
-alias ssd := system-switch-dell
+alias ssl := system-switch-laptop
 
-system-switch-dell:
-    sudo nixos-rebuild switch --flake .#dell
+system-switch-laptop:
+    sudo nixos-rebuild switch --flake .#laptop

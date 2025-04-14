@@ -60,7 +60,7 @@
 
   # Networking stuff.
   netmod.enable = true;
-  netmod.name = "dell";
+  netmod.name = "laptop";
 
   # Media stuff.
   bluetooth.enable = true;

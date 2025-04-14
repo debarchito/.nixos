@@ -44,10 +44,10 @@
     {
       formatter.${system} = treefmtEval.config.build.wrapper;
       checks.${system}.formatting = treefmtEval.config.build.check self;
-      nixosConfigurations.dell = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/dell
+          ./hosts/laptop
           ./games
         ];
       };
