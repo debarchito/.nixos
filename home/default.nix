@@ -32,7 +32,6 @@
     pkgs.just
     pkgs.krita
     pkgs.kdePackages.kconfig
-    pkgs.kdePackages.ktorrent
     pkgs.kdePackages.krohnkite
     pkgs.kdePackages.filelight
     pkgs.kdePackages.kde-gtk-config
@@ -46,12 +45,15 @@
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
+    pkgs.qbittorrent
+    pkgs.ryubing
     pkgs.ripgrep
     pkgs.ripgrep-all
     pkgs.scrcpy
     pkgs.taplo
     pkgs.thunderbird
     pkgs.unzip
+    pkgs.unrar
     pkgs.umu-launcher
     pkgs.vscode-langservers-extracted
     pkgs.wget
