@@ -17,7 +17,4 @@
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
-
-  # Controller stuff.
-  hardware.xone.enable = true;
 }
