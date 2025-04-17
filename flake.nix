@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,24 +19,32 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
+    kwin-effects-forceblur = {
+      url = "github:taj-ny/kwin-effects-forceblur";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
       self,
       nixpkgs,
       nix-flatpak,
+      catppuccin,
       home-manager,
       nur,
       treefmt-nix,
-      catppuccin,
+      kwin-effects-forceblur,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
+      overlay = final: prev: {
+        kwin-effects-forceblur = kwin-effects-forceblur.packages.${system}.default;
+      };
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
+          overlay
           nur.overlays.default
         ];
       };

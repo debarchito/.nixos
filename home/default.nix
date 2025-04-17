@@ -34,6 +34,7 @@
     pkgs.kdePackages.kconfig
     pkgs.kdePackages.krohnkite
     pkgs.kdePackages.filelight
+    pkgs.kwin-effects-forceblur
     pkgs.kdePackages.kde-gtk-config
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
