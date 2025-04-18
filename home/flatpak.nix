@@ -13,6 +13,10 @@
         origin = "flathub";
       }
       {
+        appId = "com.usebottles.bottles";
+        origin = "flathub";
+      }
+      {
         appId = "md.obsidian.Obsidian";
         origin = "flathub";
       }

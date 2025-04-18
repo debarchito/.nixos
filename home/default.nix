@@ -55,7 +55,6 @@
     pkgs.thunderbird
     pkgs.unzip
     pkgs.unrar
-    pkgs.umu-launcher
     pkgs.vscode-langservers-extracted
     pkgs.wget
     pkgs.wl-clipboard
