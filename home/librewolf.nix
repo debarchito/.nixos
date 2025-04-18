@@ -42,6 +42,16 @@
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@nw" ];
         };
+        "AUR - Packages" = {
+          urls = [
+            {
+              template = "https://aur.archlinux.org/packages?K={searchTerms}";
+            }
+          ];
+          icon = "https://wiki.archlinux.org/favicon.ico";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@aur" ];
+        };
         "Arch Wiki" = {
           urls = [ { template = "https://wiki.archlinux.org/index.php?search={searchTerms}"; } ];
           icon = "https://wiki.archlinux.org/favicon.ico";
