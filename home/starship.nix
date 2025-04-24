@@ -24,6 +24,7 @@
         disabled = false;
         symbols = {
           Arch = "󰣇 ";
+          Fedora = " ";
           NixOS = "󱄅 ";
         };
         style = "bold #cba6f7";
@@ -62,12 +63,10 @@
         style = "bold #cba6f7";
       };
       nix_shell = {
-        format = "@ [$name]($style) ";
-        style = "bold #cba6f7";
+        format = "@ [󱄅 $name](bold #89b4fa) ";
       };
       python = {
-        format = "@ [$virtualenv]($style) ";
-        style = "bold #cba6f7";
+        format = "@ [ $virtualenv](bold #cba6f7) ";
       };
     };
   };
