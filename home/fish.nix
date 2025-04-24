@@ -57,6 +57,17 @@
         end
         NIXPKGS_ALLOW_UNFREE=1 nix run --impure nixpkgs#$argv[1] -- $argv[2..-1]
       '';
+      shell = ''
+        if test (count $argv) -eq 0
+          echo "Usage: shell <package> [<package>...]"
+          return 1
+        end
+        set pkgs
+        for pkg in $argv
+          set -a pkgs nixpkgs#$pkg
+        end
+        nix shell $pkgs --command fish
+      '';
     };
   };
 }
