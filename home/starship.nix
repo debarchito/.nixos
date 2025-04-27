@@ -20,6 +20,7 @@
         "$python"
         "$character"
       ];
+      hostname.ssh_symbol = " ";
       os = {
         disabled = false;
         symbols = {
