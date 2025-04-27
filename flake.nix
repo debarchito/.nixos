@@ -11,6 +11,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-alien = {
+      url = "github:thiagokokada/nix-alien";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +36,7 @@
       catppuccin,
       home-manager,
       nur,
+      nix-alien,
       treefmt-nix,
       kwin-effects-forceblur,
       ...
@@ -46,6 +51,7 @@
         overlays = [
           overlay
           nur.overlays.default
+          nix-alien.overlays.default
         ];
       };
       treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;

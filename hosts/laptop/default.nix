@@ -101,6 +101,9 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  # Nix-ld.
+  programs.nix-ld.enable = true;
+
   # Me!
   users.users.debarchito = {
     isNormalUser = true;

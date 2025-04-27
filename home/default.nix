@@ -41,6 +41,7 @@
     pkgs.mpv
     pkgs.marksman
     pkgs.nixd
+    pkgs.nix-alien
     pkgs.nixfmt-rfc-style
     pkgs.nur.repos.ataraxiasjel.waydroid-script
     pkgs.prismlauncher
