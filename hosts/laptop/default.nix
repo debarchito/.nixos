@@ -119,5 +119,8 @@
   };
 
   # Variables stuff.
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    ZED_WINDOW_DECORATIONS = "server";
+  };
 }
