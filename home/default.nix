@@ -44,6 +44,7 @@
     pkgs.nix-alien
     pkgs.nixfmt-rfc-style
     pkgs.nur.repos.ataraxiasjel.waydroid-script
+    pkgs.protonvpn-gui
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
