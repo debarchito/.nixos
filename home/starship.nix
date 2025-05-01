@@ -25,6 +25,7 @@
         disabled = false;
         symbols = {
           Arch = "󰣇 ";
+          Debian = " ";
           Fedora = " ";
           NixOS = "󱄅 ";
         };
