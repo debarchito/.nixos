@@ -17,7 +17,7 @@
         origin = "flathub";
       }
       {
-        appId = "md.obsidian.Obsidian";
+        appId = "io.github.flattool.Warehouse";
         origin = "flathub";
       }
     ];

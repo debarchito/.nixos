@@ -19,12 +19,11 @@
     pkgs.devenv
     pkgs.duckdb
     pkgs.distrobox
-    pkgs.fd
     pkgs.erdtree
     pkgs.fd
     pkgs.ffmpeg
     pkgs.ferium
-    pkgs.gitu
+    pkgs.foliate
     pkgs.inkscape
     pkgs.inotify-tools
     pkgs.jetbrains.idea-ultimate
@@ -44,6 +43,7 @@
     pkgs.nix-alien
     pkgs.nixfmt-rfc-style
     pkgs.nur.repos.ataraxiasjel.waydroid-script
+    pkgs.obsidian
     pkgs.protonvpn-gui
     pkgs.prismlauncher
     pkgs.podman-compose
