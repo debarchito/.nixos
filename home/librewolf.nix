@@ -42,6 +42,16 @@
           updateInterval = 24 * 60 * 60 * 1000;
           definedAliases = [ "@nw" ];
         };
+        "Noogλe" = {
+          urls = [
+            {
+              template = "https://noogle.dev/q?term={searchTerms}";
+            }
+          ];
+          icon = "https://wiki.nixos.org/nixos.png";
+          updateInterval = 24 * 60 * 60 * 1000;
+          definedAliases = [ "@noo" ];
+        };
         "AUR - Packages" = {
           urls = [
             {
