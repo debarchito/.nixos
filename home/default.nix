@@ -26,9 +26,9 @@
     pkgs.foliate
     pkgs.inkscape
     pkgs.inotify-tools
-    pkgs.jetbrains.idea-ultimate
     pkgs.jq
     pkgs.just
+    pkgs.jetbrains.idea-ultimate
     pkgs.krita
     pkgs.kdePackages.kconfig
     pkgs.kdePackages.krohnkite
