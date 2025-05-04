@@ -84,6 +84,7 @@
   imports = [
     ./eza.nix
     ./ghostty.nix
+    ./jujutsu.nix
     ./kdeconnect.nix
     ./librewolf.nix
     ./bat.nix
