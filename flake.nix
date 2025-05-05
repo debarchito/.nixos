@@ -71,7 +71,7 @@
         modules = [
           catppuccin.homeModules.catppuccin
           nix-flatpak.homeManagerModules.nix-flatpak
-          ./home
+          ./homes/debarchito
         ];
       };
     };

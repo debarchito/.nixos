@@ -3,16 +3,16 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/common-settings.nix
-    ../../modules/trusted-substituters.nix
-    ../../modules/security.nix
-    ../../modules/netmod.nix
-    ../../modules/bluetooth.nix
-    ../../modules/pipewire.nix
-    ../../modules/graphics.nix
-    ../../modules/podman.nix
-    ../../modules/vm.nix
-    ../../modules/sunshine.nix
+    ../../modules/hosts/common-settings.nix
+    ../../modules/hosts/trusted-substituters.nix
+    ../../modules/hosts/security.nix
+    ../../modules/hosts/netmod.nix
+    ../../modules/hosts/bluetooth.nix
+    ../../modules/hosts/pipewire.nix
+    ../../modules/hosts/graphics.nix
+    ../../modules/hosts/podman.nix
+    ../../modules/hosts/vm.nix
+    ../../modules/hosts/sunshine.nix
   ];
 
   # Some stuff that should exist independently.
