@@ -1,8 +1,8 @@
 default:
     @just --list
 
-alias hs := home-switch
-home-switch:
+alias hsd := home-switch-debarchito
+home-switch-debarchito:
     nix run home-manager/master -- switch --flake .#debarchito
 
 alias ssl := system-switch-laptop
