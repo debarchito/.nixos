@@ -80,19 +80,14 @@
       search.force = true;
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
-        clearurls
         darkreader
-        decentraleyes
         foxytab
         firefox-color
         fastforwardteam
         foxyproxy-standard
-        firefox-translations
         privacy-badger
-        read-aloud
         return-youtube-dislikes
         sponsorblock
-        stylus
         tabliss
         ublock-origin
         user-agent-string-switcher
