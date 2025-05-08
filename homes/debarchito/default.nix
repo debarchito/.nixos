@@ -77,25 +77,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # Catppuccin!
-  catppuccin = {
-    flavor = "mocha";
-    bat.enable = true;
-    btop.enable = true;
-    fish.enable = true;
-    fzf.enable = true;
-    gtk.enable = true;
-    helix.enable = true;
-    mpv.enable = true;
-    nushell.enable = true;
-    obs.enable = true;
-    starship.enable = true;
-    thunderbird.enable = true;
-    tmux.enable = true;
-    yazi.enable = true;
-    zathura.enable = true;
-    zed.enable = true;
-    zellij.enable = true;
-  };
+  catppuccin.enable = true;
+  catppuccin.flavor = "mocha";
 
   # Modules.
   imports = [

@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
 {
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
+    package = pkgs.librewolf;
     profiles.debarchito = {
       isDefault = true;
       search.engines = {
@@ -98,6 +99,19 @@
         violentmonkey
         web-archives
       ];
+      containers = {
+        "Personal" = {
+          id = 1;
+          color = "purple";
+          icon = "fingerprint";
+        };
+        "College" = {
+          id = 2;
+          color = "orange";
+          icon = "fence";
+        };
+      };
+      containersForce = true;
       settings = {
         "places.history.enabled" = false;
         "layout.css.has-selector.enabled" = true;
