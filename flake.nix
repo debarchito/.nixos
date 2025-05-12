@@ -19,6 +19,10 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helix = {
+      url = "github:helix-editor/helix/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,6 +41,7 @@
       home-manager,
       nur,
       nix-alien,
+      helix,
       treefmt-nix,
       kwin-effects-forceblur,
       ...
@@ -45,6 +50,7 @@
       system = "x86_64-linux";
       overlay = final: prev: {
         kwin-effects-forceblur = kwin-effects-forceblur.packages.${system}.default;
+        helix-master = helix.packages.${system}.default;
       };
       pkgs = import nixpkgs {
         inherit system;
