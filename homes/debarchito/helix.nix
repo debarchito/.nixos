@@ -3,7 +3,7 @@
 {
   programs.helix = {
     enable = true;
-    package = pkgs.helix-master;
+    package = pkgs.external.helix;
     defaultEditor = true;
     settings = {
       editor = {
@@ -65,23 +65,9 @@
             ":insert-output echo '\x1b[?1049h\x1b[?2004h' > /dev/tty"
             ":open %sh{cat /tmp/unique-file}"
             ":redraw"
+            ":set mouse false"
+            ":set mouse true"
           ];
-          space = {
-            e = [
-              ":sh rm -f /tmp/unique-file-h21a434"
-              ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/unique-file-h21a434"
-              ":insert-output echo \"x1b[?1049h\" > /dev/tty"
-              ":open %sh{cat /tmp/unique-file-h21a434}"
-              ":redraw"
-            ];
-            E = [
-              ":sh rm -f /tmp/unique-file-u41ae14"
-              ":insert-output yazi '%{workspace_directory}' --chooser-file=/tmp/unique-file-u41ae14"
-              ":insert-output echo \"x1b[?1049h\" > /dev/tty"
-              ":open %sh{cat /tmp/unique-file-u41ae14}"
-              ":redraw"
-            ];
-          };
         };
         insert.C-space = "completion";
       };

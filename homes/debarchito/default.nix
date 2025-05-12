@@ -20,6 +20,8 @@
     pkgs.duckdb
     pkgs.distrobox
     pkgs.erdtree
+    pkgs.external.snippets-ls
+    pkgs.external.kwin-effects-forceblur
     pkgs.fd
     pkgs.ffmpeg
     pkgs.ferium
@@ -33,7 +35,6 @@
     pkgs.kdePackages.kconfig
     pkgs.kdePackages.krohnkite
     pkgs.kdePackages.filelight
-    pkgs.kwin-effects-forceblur
     pkgs.kdePackages.kde-gtk-config
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
@@ -54,6 +55,9 @@
     pkgs.ripgrep-all
     pkgs.scrcpy
     pkgs.taplo
+    pkgs.typst
+    pkgs.typstyle
+    pkgs.tinymist
     pkgs.thunderbird
     pkgs.unzip
     pkgs.unrar
