@@ -1,6 +1,14 @@
-{ lib, ... }:
+{ ... }:
 
 {
-  programs.ghostty.enable = true;
-  xdg.configFile."ghostty/config".source = lib.mkForce ./ghostty/config;
+  programs.ghostty = {
+    enable = true;
+    settings = {
+      command = "fish";
+      shell-integration = "fish";
+      window-decoration = "server";
+      window-padding-x = 10;
+      font-size = 14;
+    };
+  };
 }
