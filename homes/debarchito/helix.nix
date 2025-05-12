@@ -226,6 +226,17 @@
           };
           auto-format = true;
         }
+        {
+          name = "typst";
+          formatter = {
+            command = "typstyle";
+          };
+          indent = {
+            tab-width = 2;
+            unit = " ";
+          };
+          auto-format = true;
+        }
       ];
     };
   };
