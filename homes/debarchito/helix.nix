@@ -228,9 +228,7 @@
         }
         {
           name = "typst";
-          formatter = {
-            command = "typstyle";
-          };
+          formatter.command = "typstyle";
           indent = {
             tab-width = 2;
             unit = " ";
