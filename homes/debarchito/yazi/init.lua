@@ -1,8 +1,8 @@
 require("duckdb"):setup()
 
-require("full-border"):setup {
-  type = ui.Border.ROUNDED,
-}
+require("full-border"):setup({
+	type = ui.Border.ROUNDED,
+})
 
 require("no-status"):setup()
 
@@ -13,7 +13,7 @@ require("yatline"):setup({
 	header_line = {
 		left = {
 			section_a = {
-        { type = "line", custom = false, name = "tabs", params = { "left" } },
+				{ type = "line", custom = false, name = "tabs", params = { "left" } },
 			},
 			section_b = {},
 			section_c = {},
