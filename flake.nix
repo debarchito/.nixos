@@ -15,10 +15,6 @@
       url = "github:thiagokokada/nix-alien";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     helix = {
       url = "github:helix-editor/helix/master";
       inputs.nixpkgs.follows = "nixpkgs";

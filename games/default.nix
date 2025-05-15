@@ -1,8 +1,4 @@
 {
-  imports = [
-    ./aagl.nix
-  ];
-
   # Some stuff I suppose.
   programs.gamescope = {
     enable = true;
