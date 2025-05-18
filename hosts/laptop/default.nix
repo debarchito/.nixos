@@ -104,6 +104,9 @@
   # Nix-ld.
   programs.nix-ld.enable = true;
 
+  # OpenSHH
+  services.openssh.enable = true;
+
   # Me!
   users.users.debarchito = {
     isNormalUser = true;
