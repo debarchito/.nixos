@@ -7,7 +7,6 @@
     enableFishIntegration = true;
     enableNushellIntegration = true;
     plugins = {
-      duckdb = pkgs.yaziPlugins.duckdb;
       full-border = pkgs.yaziPlugins.full-border;
       no-status = pkgs.yaziPlugins.no-status;
       yatline = pkgs.yaziPlugins.yatline;

@@ -16,8 +16,6 @@
     # programs
     pkgs.blender
     pkgs.deno
-    pkgs.devenv
-    pkgs.duckdb
     pkgs.distrobox
     pkgs.erdtree
     pkgs.external.snippets-ls
@@ -27,14 +25,12 @@
     pkgs.ferium
     pkgs.foliate
     pkgs.inkscape
-    pkgs.inotify-tools
     pkgs.jq
     pkgs.just
     pkgs.jetbrains.idea-ultimate
     pkgs.krita
     pkgs.kdePackages.kconfig
     pkgs.kdePackages.krohnkite
-    pkgs.kdePackages.filelight
     pkgs.kdePackages.kde-gtk-config
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
@@ -53,12 +49,10 @@
     pkgs.ryubing
     pkgs.ripgrep
     pkgs.ripgrep-all
-    pkgs.scrcpy
     pkgs.taplo
     pkgs.typst
     pkgs.typstyle
     pkgs.tinymist
-    pkgs.thunderbird
     pkgs.unzip
     pkgs.unrar
     pkgs.vscode-langservers-extracted
