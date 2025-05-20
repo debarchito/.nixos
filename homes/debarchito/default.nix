@@ -16,6 +16,7 @@
     # programs
     pkgs.blender
     pkgs.deno
+    pkgs.devenv
     pkgs.distrobox
     pkgs.erdtree
     pkgs.external.snippets-ls
