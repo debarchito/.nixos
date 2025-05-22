@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
