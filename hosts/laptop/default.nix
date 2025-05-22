@@ -89,7 +89,7 @@
   podman.enable = true;
   vm.enable = true;
   vm.kvm.enable = true;
-  vm.waydroid.enable = true;
+  # vm.waydroid.enable = true;
 
   # Sunshine (and Moonlight) stuff.
   sunshine.enable = true;
