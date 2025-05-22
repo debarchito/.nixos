@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
@@ -56,13 +57,14 @@
           inputs.nix-alien.overlays.default
         ];
       };
+      upkgs = import inputs.nixpkgs-unstable { inherit system; };
       treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
       formatter.${system} = treefmtEval.config.build.wrapper;
       checks.${system}.formatting = treefmtEval.config.build.check inputs.self;
       nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs upkgs; };
         modules = [
           ./hosts/laptop
           ./games
@@ -70,6 +72,7 @@
       };
       homeConfigurations.debarchito = inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit upkgs; };
         modules = [
           inputs.catppuccin.homeModules.catppuccin
           inputs.nix-flatpak.homeManagerModules.nix-flatpak
