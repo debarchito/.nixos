@@ -39,7 +39,6 @@
     preferAbbrs = true;
     shellAbbrs = {
       cd = "z";
-      tree = "erd";
       rp = "kwin_wayland --replace & plasmashell --replace &";
     };
     functions = {

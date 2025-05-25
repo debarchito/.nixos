@@ -15,10 +15,8 @@
     pkgs.bibata-cursors
     # programs
     pkgs.blender
-    pkgs.deno
     pkgs.devenv
     pkgs.distrobox
-    pkgs.erdtree
     pkgs.external.snippets-ls
     pkgs.external.kwin-effects-forceblur
     pkgs.fd
@@ -40,27 +38,19 @@
     pkgs.nixd
     pkgs.nix-alien
     pkgs.nixfmt-rfc-style
-    pkgs.nur.repos.ataraxiasjel.waydroid-script
     pkgs.obsidian
     pkgs.protonvpn-gui
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
     pkgs.qbittorrent
-    pkgs.ryubing
     pkgs.ripgrep
     pkgs.ripgrep-all
-    pkgs.taplo
-    pkgs.typst
-    pkgs.typstyle
-    pkgs.tinymist
     pkgs.unzip
     pkgs.unrar
-    pkgs.vscode-langservers-extracted
     pkgs.wget
     pkgs.wl-clipboard
     pkgs.youtube-music
-    pkgs.yaml-language-server
     pkgs.zed-editor-fhs
     # fonts
     pkgs.nerd-fonts.jetbrains-mono
