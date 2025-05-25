@@ -1,25 +1,19 @@
+{ lib, ... }:
+
 {
   services.flatpak = {
     enable = true;
-    remotes = [
+    remotes = lib.mkOptionDefault [
       {
         name = "flathub";
         location = "https://flathub.org/repo/flathub.flatpakrepo";
       }
     ];
     packages = [
-      {
-        appId = "com.obsproject.Studio";
-        origin = "flathub";
-      }
-      {
-        appId = "com.usebottles.bottles";
-        origin = "flathub";
-      }
-      {
-        appId = "io.github.flattool.Warehouse";
-        origin = "flathub";
-      }
+      "com.obsproject.Studio"
+      "com.usebottles.bottles"
+      "it.mijorus.gearlever"
+      "io.github.flattool.Warehouse"
     ];
     update.auto.enable = true;
     update.auto.onCalendar = "daily";
