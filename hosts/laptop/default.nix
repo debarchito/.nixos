@@ -100,6 +100,12 @@
   # AppImage stuff.
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
+  programs.appimage.package = pkgs.appimage-run.override {
+    extraPkgs = pkgs: [
+      pkgs.libxcrypt
+      pkgs.icu
+    ];
+  };
 
   # Nix-ld.
   programs.nix-ld.enable = true;
