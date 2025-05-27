@@ -24,6 +24,7 @@
     pkgs.ferium
     pkgs.foliate
     pkgs.inkscape
+    pkgs.inotify-tools
     pkgs.jq
     pkgs.just
     pkgs.jetbrains.idea-ultimate
