@@ -14,9 +14,10 @@
     })
     pkgs.bibata-cursors
     # programs
-    pkgs.external.blender
     pkgs.devenv
     pkgs.distrobox
+    pkgs.external.blender
+    pkgs.external.obs-studio
     pkgs.external.snippets-ls
     pkgs.external.kwin-effects-forceblur
     pkgs.fd

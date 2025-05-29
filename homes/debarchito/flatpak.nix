@@ -10,7 +10,6 @@
       }
     ];
     packages = [
-      "com.obsproject.Studio"
       "com.usebottles.bottles"
       "it.mijorus.gearlever"
       "io.github.flattool.Warehouse"

@@ -48,6 +48,7 @@
           snippets-ls = inputs.snippets-ls.packages.${prev.system}.snippets-ls;
           yazi = inputs.yazi.packages.${prev.system}.default;
           blender = inputs.cachix.packages.${prev.system}.blender;
+          obs-studio = inputs.cachix.packages.${prev.system}.obs-studio;
         };
       };
       pkgs = import inputs.nixpkgs {
