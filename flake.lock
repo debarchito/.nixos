@@ -1,8 +1,26 @@
 {
   "nodes": {
-    "catppuccin": {
+    "cachix": {
       "inputs": {
         "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1748527059,
+        "narHash": "sha256-5HgXtvBwZ9mQ8euKcfBqrGJDPhSjTygh9DLaFQ1IXeI=",
+        "owner": "debarchito",
+        "repo": "cachix",
+        "rev": "0ff84ef82079887a96af71f39cbd421281e79607",
+        "type": "github"
+      },
+      "original": {
+        "owner": "debarchito",
+        "repo": "cachix",
+        "type": "github"
+      }
+    },
+    "catppuccin": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1748080874,
@@ -195,6 +213,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1748370509,
+        "narHash": "sha256-QlL8slIgc16W5UaI3w7xHQEP+Qmv/6vSNTpoZrrSlbk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "4faa5f5321320e49a78ae7848582f684d64783e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1744463964,
         "narHash": "sha256-LWqduOgLHCFxiTNYi3Uj5Lgz0SR+Xhw3kr/3Xd0GPTM=",
         "owner": "NixOS",
@@ -209,7 +243,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1748370509,
         "narHash": "sha256-QlL8slIgc16W5UaI3w7xHQEP+Qmv/6vSNTpoZrrSlbk=",
@@ -249,13 +283,14 @@
     },
     "root": {
       "inputs": {
+        "cachix": "cachix",
         "catppuccin": "catppuccin",
         "helix": "helix",
         "home-manager": "home-manager",
         "kwin-effects-forceblur": "kwin-effects-forceblur",
         "nix-alien": "nix-alien",
         "nix-flatpak": "nix-flatpak",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nur": "nur",
         "snippets-ls": "snippets-ls",
         "treefmt-nix": "treefmt-nix_2",

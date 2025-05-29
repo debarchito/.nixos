@@ -14,7 +14,7 @@
     })
     pkgs.bibata-cursors
     # programs
-    pkgs.blender
+    pkgs.external.blender
     pkgs.devenv
     pkgs.distrobox
     pkgs.external.snippets-ls

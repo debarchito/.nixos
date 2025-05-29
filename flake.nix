@@ -3,6 +3,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
+    cachix.url = "github:debarchito/cachix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,6 +47,7 @@
           kwin-effects-forceblur = inputs.kwin-effects-forceblur.packages.${prev.system}.default;
           snippets-ls = inputs.snippets-ls.packages.${prev.system}.snippets-ls;
           yazi = inputs.yazi.packages.${prev.system}.default;
+          blender = inputs.cachix.packages.${prev.system}.blender;
         };
       };
       pkgs = import inputs.nixpkgs {
