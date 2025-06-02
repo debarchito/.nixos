@@ -31,6 +31,9 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelPackages = pkgs.linuxPackages_6_14;
 
+  # Zram stuff.
+  zramSwap.enable = true;
+
   # Fine-grained localization stuff.
   time.timeZone = "Asia/Kolkata";
   i18n.supportedLocales = [
