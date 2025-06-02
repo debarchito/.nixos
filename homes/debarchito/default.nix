@@ -19,7 +19,6 @@
     pkgs.external.blender
     pkgs.external.obs-studio
     pkgs.external.snippets-ls
-    pkgs.external.kwin-effects-forceblur
     pkgs.fd
     pkgs.ffmpeg
     pkgs.ferium

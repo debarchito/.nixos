@@ -28,10 +28,6 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    kwin-effects-forceblur = {
-      url = "github:taj-ny/kwin-effects-forceblur";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     snippets-ls = {
       url = "github:quantonganh/snippets-ls";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +40,6 @@
       overlay = final: prev: {
         external = {
           helix = inputs.helix.packages.${prev.system}.default;
-          kwin-effects-forceblur = inputs.kwin-effects-forceblur.packages.${prev.system}.default;
           snippets-ls = inputs.snippets-ls.packages.${prev.system}.snippets-ls;
           yazi = inputs.yazi.packages.${prev.system}.default;
           blender = inputs.cachix.packages.${prev.system}.blender;
