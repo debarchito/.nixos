@@ -39,9 +39,7 @@
       system = "x86_64-linux";
       overlay = final: prev: {
         external = {
-          helix = inputs.helix.packages.${prev.system}.default;
           snippets-ls = inputs.snippets-ls.packages.${prev.system}.snippets-ls;
-          yazi = inputs.yazi.packages.${prev.system}.default;
           blender = inputs.cachix.packages.${prev.system}.blender;
           obs-studio = inputs.cachix.packages.${prev.system}.obs-studio;
         };
@@ -50,8 +48,10 @@
         inherit system;
         overlays = [
           overlay
+          inputs.helix.overlays.default
           inputs.nur.overlays.default
           inputs.nix-alien.overlays.default
+          inputs.yazi.overlays.default
         ];
       };
       treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;

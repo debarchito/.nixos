@@ -1,9 +1,6 @@
-{ pkgs, ... }:
-
 {
   programs.helix = {
     enable = true;
-    package = pkgs.external.helix;
     defaultEditor = true;
     settings = {
       editor = {

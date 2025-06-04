@@ -3,7 +3,6 @@
 {
   programs.yazi = {
     enable = true;
-    package = pkgs.external.yazi;
     enableFishIntegration = true;
     enableNushellIntegration = true;
     plugins = {
