@@ -34,7 +34,6 @@
     pkgs.kdePackages.kde-gtk-config
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
-    pkgs.mpv
     pkgs.marksman
     pkgs.nixd
     pkgs.nix-alien
@@ -49,6 +48,7 @@
     pkgs.ripgrep-all
     pkgs.unzip
     pkgs.unrar
+    pkgs.vlc
     pkgs.wget
     pkgs.wl-clipboard
     pkgs.youtube-music
