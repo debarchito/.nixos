@@ -17,7 +17,6 @@
     pkgs.devenv
     pkgs.distrobox
     pkgs.blender
-    pkgs.obs-studio
     pkgs.external.snippets-ls
     pkgs.fd
     pkgs.ffmpeg
@@ -86,6 +85,7 @@
     ./git.nix
     ./helix.nix
     ./nushell.nix
+    ./obs-studio.nix
     ./starship.nix
     ./yazi.nix
     ./zoxide.nix
