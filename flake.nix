@@ -3,7 +3,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
-    cachix.url = "github:debarchito/cachix";
+    dcachix.url = "github:debarchito/dcachix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,18 +40,17 @@
       overlay = final: prev: {
         external = {
           snippets-ls = inputs.snippets-ls.packages.${prev.system}.snippets-ls;
-          blender = inputs.cachix.packages.${prev.system}.blender;
-          obs-studio = inputs.cachix.packages.${prev.system}.obs-studio;
         };
       };
       pkgs = import inputs.nixpkgs {
         inherit system;
         overlays = [
-          overlay
+          inputs.dcachix.overlays.default
           inputs.helix.overlays.default
           inputs.nur.overlays.default
           inputs.nix-alien.overlays.default
           inputs.yazi.overlays.default
+          overlay
         ];
       };
       treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;

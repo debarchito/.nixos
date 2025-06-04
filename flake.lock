@@ -1,26 +1,8 @@
 {
   "nodes": {
-    "cachix": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1748540967,
-        "narHash": "sha256-/sDzJW6hSFL6mWfsXgr6kZ4OwPk1HTBwrQl3F30owOs=",
-        "owner": "debarchito",
-        "repo": "cachix",
-        "rev": "a1edcbd4648ad4499485433bb1b35050c657b901",
-        "type": "github"
-      },
-      "original": {
-        "owner": "debarchito",
-        "repo": "cachix",
-        "type": "github"
-      }
-    },
     "catppuccin": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1748080874,
@@ -33,6 +15,24 @@
       "original": {
         "owner": "catppuccin",
         "repo": "nix",
+        "type": "github"
+      }
+    },
+    "dcachix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1749032880,
+        "narHash": "sha256-w2oZMjJ8nWbbncREYZnE+ixPH5B4fohE+DKybr8rws8=",
+        "owner": "debarchito",
+        "repo": "dcachix",
+        "rev": "acd1c600fe327b272df8a57c5e559e14b96162e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "debarchito",
+        "repo": "dcachix",
         "type": "github"
       }
     },
@@ -192,22 +192,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1748370509,
-        "narHash": "sha256-QlL8slIgc16W5UaI3w7xHQEP+Qmv/6vSNTpoZrrSlbk=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "4faa5f5321320e49a78ae7848582f684d64783e9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1744463964,
         "narHash": "sha256-LWqduOgLHCFxiTNYi3Uj5Lgz0SR+Xhw3kr/3Xd0GPTM=",
         "owner": "NixOS",
@@ -217,6 +201,22 @@
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1748370509,
+        "narHash": "sha256-QlL8slIgc16W5UaI3w7xHQEP+Qmv/6vSNTpoZrrSlbk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "4faa5f5321320e49a78ae7848582f684d64783e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -262,8 +262,8 @@
     },
     "root": {
       "inputs": {
-        "cachix": "cachix",
         "catppuccin": "catppuccin",
+        "dcachix": "dcachix",
         "helix": "helix",
         "home-manager": "home-manager",
         "nix-alien": "nix-alien",

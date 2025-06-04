@@ -16,8 +16,8 @@
     # programs
     pkgs.devenv
     pkgs.distrobox
-    pkgs.external.blender
-    pkgs.external.obs-studio
+    pkgs.blender
+    pkgs.obs-studio
     pkgs.external.snippets-ls
     pkgs.fd
     pkgs.ffmpeg
