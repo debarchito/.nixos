@@ -85,7 +85,6 @@
         firefox-color
         fastforwardteam
         foxyproxy-standard
-        privacy-badger
         return-youtube-dislikes
         sponsorblock
         tabliss
