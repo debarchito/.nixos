@@ -53,6 +53,7 @@
     pkgs.youtube-music
     pkgs.zed-editor-fhs
     # fonts
+    pkgs.maple-mono.NF
     pkgs.nerd-fonts.jetbrains-mono
   ];
 
