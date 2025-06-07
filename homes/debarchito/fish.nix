@@ -49,9 +49,9 @@
         end
         nix run nixpkgs#$argv[1] -- $argv[2..-1]
       '';
-      run_unfree = ''
+      runu = ''
         if test (count $argv) -eq 0
-          echo "Usage: run_unfree <package> [<args>...]"
+          echo "Usage: runu <package> [<args>...]"
           return 1
         end
         NIXPKGS_ALLOW_UNFREE=1 nix run --impure nixpkgs#$argv[1] -- $argv[2..-1]
@@ -65,7 +65,7 @@
         for pkg in $argv
           set -a pkgs nixpkgs#$pkg
         end
-        nix shell $pkgs --command fish
+        nom shell $pkgs --command fish
       '';
     };
   };

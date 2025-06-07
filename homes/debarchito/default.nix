@@ -34,9 +34,11 @@
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
     pkgs.marksman
+    pkgs.nvd
     pkgs.nixd
     pkgs.nix-alien
     pkgs.nixfmt-rfc-style
+    pkgs.nix-output-monitor
     pkgs.obsidian
     pkgs.protonvpn-gui
     pkgs.prismlauncher
