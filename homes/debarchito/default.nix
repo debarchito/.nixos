@@ -18,6 +18,7 @@
     pkgs.devenv
     pkgs.distrobox
     pkgs.blender
+    pkgs.easyeffects
     pkgs.external.snippets-ls
     pkgs.fd
     pkgs.ffmpeg
@@ -34,6 +35,7 @@
     pkgs.kdePackages.kde-gtk-config
     pkgs.legcord
     pkgs.libreoffice-qt-fresh
+    pkgs.mpv
     pkgs.marksman
     pkgs.nvd
     pkgs.nixd
@@ -41,6 +43,7 @@
     pkgs.nixfmt-rfc-style
     pkgs.nix-output-monitor
     pkgs.obsidian
+    pkgs.protonplus
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
@@ -53,7 +56,6 @@
     pkgs.typstyle
     pkgs.unzip
     pkgs.unrar
-    pkgs.vlc
     pkgs.vscode-langservers-extracted
     pkgs.wget
     pkgs.wl-clipboard
