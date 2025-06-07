@@ -40,7 +40,6 @@
     pkgs.nixfmt-rfc-style
     pkgs.nix-output-monitor
     pkgs.obsidian
-    pkgs.protonvpn-gui
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
