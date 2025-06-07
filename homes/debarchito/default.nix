@@ -14,6 +14,7 @@
     })
     pkgs.bibata-cursors
     # programs
+    pkgs.deno
     pkgs.devenv
     pkgs.distrobox
     pkgs.blender
@@ -46,12 +47,18 @@
     pkgs.qbittorrent
     pkgs.ripgrep
     pkgs.ripgrep-all
+    pkgs.taplo
+    pkgs.typst
+    pkgs.tinymist
+    pkgs.typstyle
     pkgs.unzip
     pkgs.unrar
     pkgs.vlc
+    pkgs.vscode-langservers-extracted
     pkgs.wget
     pkgs.wl-clipboard
     pkgs.youtube-music
+    pkgs.yaml-language-server
     pkgs.zed-editor-fhs
     # fonts
     pkgs.maple-mono.NF
