@@ -80,6 +80,7 @@
       search.force = true;
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
+        canvasblocker
         darkreader
         foxytab
         firefox-color
