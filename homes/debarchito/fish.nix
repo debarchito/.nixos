@@ -35,6 +35,7 @@
     ];
     interactiveShellInit = ''
       set fish_greeting
+      set -gx PATH $PATH $HOME/.local/bin
     '';
     preferAbbrs = true;
     shellAbbrs = {
