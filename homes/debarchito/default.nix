@@ -14,6 +14,7 @@
     })
     pkgs.bibata-cursors
     # programs
+    pkgs.aseprite
     pkgs.deno
     pkgs.devenv
     pkgs.distrobox
