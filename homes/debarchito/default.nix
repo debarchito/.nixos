@@ -44,6 +44,7 @@
     pkgs.nix-output-monitor
     pkgs.obsidian
     pkgs.protonplus
+    pkgs.pika-backup
     pkgs.prismlauncher
     pkgs.podman-compose
     pkgs.quickemu
