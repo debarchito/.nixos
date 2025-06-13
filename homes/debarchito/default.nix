@@ -97,6 +97,7 @@
     ./gpg.nix
     ./git.nix
     ./helix.nix
+    ./niri.nix
     ./nushell.nix
     ./obs-studio.nix
     ./starship.nix
