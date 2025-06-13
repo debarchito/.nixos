@@ -1,3 +1,12 @@
+let
+  common-options = {
+    indent = {
+      tab-width = 2;
+      unit = " ";
+    };
+    auto-format = true;
+  };
+in
 {
   programs.helix = {
     enable = true;
@@ -71,167 +80,145 @@
     };
     languages = {
       language = [
-        {
-          name = "nix";
-          formatter.command = "nixfmt";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "html";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "html"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "css";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "css"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "json";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "json"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "jsonc";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "jsonc"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "yaml";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "yaml"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "markdown";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "md"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "sql";
-          formatter = {
-            command = "deno";
-            args = [
-              "fmt"
-              "-"
-              "--ext"
-              "sql"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "fish";
-          formatter.command = "fish_indent";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "toml";
-          formatter = {
-            command = "taplo";
-            args = [
-              "format"
-              "-"
-            ];
-          };
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
-        {
-          name = "typst";
-          formatter.command = "typstyle";
-          indent = {
-            tab-width = 2;
-            unit = " ";
-          };
-          auto-format = true;
-        }
+        (
+          {
+            name = "nix";
+            formatter.command = "nixfmt";
+          }
+          // common-options
+        )
+        (
+          {
+            name = "html";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "html"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "css";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "css"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "json";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "json"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "jsonc";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "jsonc"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "yaml";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "yaml"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "markdown";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "md"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "sql";
+            formatter = {
+              command = "deno";
+              args = [
+                "fmt"
+                "-"
+                "--ext"
+                "sql"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "fish";
+            formatter.command = "fish_indent";
+          }
+          // common-options
+        )
+        (
+          {
+            name = "toml";
+            formatter = {
+              command = "taplo";
+              args = [
+                "format"
+                "-"
+              ];
+            };
+          }
+          // common-options
+        )
+        (
+          {
+            name = "typst";
+            formatter.command = "typstyle";
+          }
+          // common-options
+        )
       ];
     };
   };
