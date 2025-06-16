@@ -66,6 +66,7 @@
     pkgs.zed-editor-fhs
     # fonts
     pkgs.maple-mono.NF
+    pkgs.noto-fonts-cjk-sans
     pkgs.nerd-fonts.jetbrains-mono
   ];
 
