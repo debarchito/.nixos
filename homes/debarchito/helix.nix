@@ -79,6 +79,10 @@ in
       };
     };
     languages = {
+      language-server.codebook = {
+        command = "codebook-lsp";
+        args = [ "serve" ];
+      };
       language = [
         (
           {
@@ -174,6 +178,10 @@ in
                 "md"
               ];
             };
+            language-servers = [
+              "codebook"
+              "marksman"
+            ];
           }
           // common-options
         )
@@ -216,6 +224,10 @@ in
           {
             name = "typst";
             formatter.command = "typstyle";
+            language-servers = [
+              "codebook"
+              "tinymist"
+            ];
           }
           // common-options
         )
