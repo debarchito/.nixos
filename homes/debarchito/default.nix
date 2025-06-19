@@ -19,7 +19,9 @@
     pkgs.deno
     pkgs.devenv
     pkgs.distrobox
-    pkgs.bottles
+    (pkgs.bottles.override {
+      removeWarningPopup = true;
+    })
     pkgs.blender
     pkgs.easyeffects
     pkgs.external.snippets-ls
