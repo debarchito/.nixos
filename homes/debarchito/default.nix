@@ -64,6 +64,7 @@
     pkgs.wl-clipboard
     pkgs.youtube-music
     pkgs.yaml-language-server
+    pkgs.zathura
     pkgs.zed-editor-fhs
     # fonts
     pkgs.maple-mono.NF
