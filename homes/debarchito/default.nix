@@ -56,6 +56,7 @@
     pkgs.quickemu
     pkgs.qbittorrent
     pkgs.ripgrep
+    pkgs.ryubing
     pkgs.ripgrep-all
     pkgs.taplo
     pkgs.typst
