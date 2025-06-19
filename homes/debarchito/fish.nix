@@ -36,11 +36,12 @@
     interactiveShellInit = ''
       set fish_greeting
       set -gx PATH $PATH $HOME/.local/bin
+      # abbrs i am too lazy to nixify
+      abbr -a --set-cursor="%" -- gcm 'git commit -S -m "%"';
     '';
     preferAbbrs = true;
     shellAbbrs = {
       cd = "z";
-      rp = "kwin_wayland --replace & plasmashell --replace &";
     };
     functions = {
       run = ''
