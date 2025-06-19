@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yazi = {
-      url = "github:sxyazi/yazi";
+      url = "github:sxyazi/yazi?rev=917fee939f23b00a6ea6180f74f7f0e76afc56f9";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     treefmt-nix = {
