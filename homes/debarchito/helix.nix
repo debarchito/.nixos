@@ -79,15 +79,25 @@ in
       };
     };
     languages = {
-      language-server.codebook = {
-        command = "codebook-lsp";
-        args = [ "serve" ];
+      language-server = {
+        codebook = {
+          command = "codebook-lsp";
+          args = [ "serve" ];
+        };
+        scls = {
+          command = "simple-completion-language-server";
+        };
       };
       language = [
         (
           {
             name = "nix";
             formatter.command = "nixfmt";
+            language-servers = [
+              "codebook"
+              "nixd"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -101,6 +111,11 @@ in
                 "-"
                 "--ext"
                 "html"
+              ];
+              language-servers = [
+                "codebook"
+                "vscode-html-language-server"
+                "scls"
               ];
             };
           }
@@ -118,6 +133,11 @@ in
                 "css"
               ];
             };
+            language-servers = [
+              "codebook"
+              "vscode-css-language-server"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -133,6 +153,11 @@ in
                 "json"
               ];
             };
+            language-servers = [
+              "codebook"
+              "vscode-json-language-server"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -148,6 +173,11 @@ in
                 "jsonc"
               ];
             };
+            language-servers = [
+              "codebook"
+              "vscode-json-language-server"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -163,6 +193,11 @@ in
                 "yaml"
               ];
             };
+            language-servers = [
+              "codebook"
+              "yaml-language-server"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -181,6 +216,7 @@ in
             language-servers = [
               "codebook"
               "marksman"
+              "scls"
             ];
           }
           // common-options
@@ -196,6 +232,10 @@ in
                 "--ext"
                 "sql"
               ];
+              language-servers = [
+                "codebook"
+                "scls"
+              ];
             };
           }
           // common-options
@@ -204,6 +244,11 @@ in
           {
             name = "fish";
             formatter.command = "fish_indent";
+            language-servers = [
+              "codebook"
+              "fish-lsp"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -217,6 +262,11 @@ in
                 "-"
               ];
             };
+            language-servers = [
+              "codebook"
+              "taplo"
+              "scls"
+            ];
           }
           // common-options
         )
@@ -227,11 +277,25 @@ in
             language-servers = [
               "codebook"
               "tinymist"
+              "scls"
             ];
           }
           // common-options
         )
+        # these should use project-specific formatting
+        {
+          name = "rust";
+          language-servers = [
+            "codebook"
+            "rust-analyzer"
+            "scls"
+          ];
+        }
       ];
     };
   };
+  xdg.configFile."helix/snippets/nix.json".source = ./helix/snippets/nix.json;
+  xdg.configFile."helix/snippets/rust.json".source = ./helix/snippets/rust.json;
+  xdg.configFile."helix/snippets/sql.json".source = ./helix/snippets/sql.json;
+  xdg.configFile."helix/snippets/typst.json".source = ./helix/snippets/typst.json;
 }

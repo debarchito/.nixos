@@ -269,7 +269,6 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_3",
         "nur": "nur",
-        "snippets-ls": "snippets-ls",
         "treefmt-nix": "treefmt-nix_2",
         "yazi": "yazi"
       }
@@ -313,26 +312,6 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "type": "github"
-      }
-    },
-    "snippets-ls": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1718632593,
-        "narHash": "sha256-RxMA8ut1fsxhKRELodR4lHc+fl3e1y803GCW/kfDzSI=",
-        "owner": "quantonganh",
-        "repo": "snippets-ls",
-        "rev": "063ba0f72f6d80829e17c6e5de6c9ae0aa05a841",
-        "type": "github"
-      },
-      "original": {
-        "owner": "quantonganh",
-        "repo": "snippets-ls",
         "type": "github"
       }
     },

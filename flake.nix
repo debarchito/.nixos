@@ -28,20 +28,11 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    snippets-ls = {
-      url = "github:quantonganh/snippets-ls";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   outputs =
     inputs:
     let
       system = "x86_64-linux";
-      overlay = final: prev: {
-        external = {
-          snippets-ls = inputs.snippets-ls.packages.${prev.system}.snippets-ls;
-        };
-      };
       pkgs = import inputs.nixpkgs {
         inherit system;
         overlays = [
@@ -50,7 +41,6 @@
           inputs.nur.overlays.default
           inputs.nix-alien.overlays.default
           inputs.yazi.overlays.default
-          overlay
         ];
       };
       treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;

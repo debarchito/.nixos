@@ -24,11 +24,11 @@
     })
     pkgs.blender
     pkgs.easyeffects
-    pkgs.external.snippets-ls
     pkgs.fd
     pkgs.ffmpeg
     pkgs.ferium
     pkgs.foliate
+    pkgs.fish-lsp
     pkgs.gearlever
     pkgs.inkscape
     pkgs.inotify-tools
@@ -58,6 +58,7 @@
     pkgs.ripgrep
     pkgs.ryubing
     pkgs.ripgrep-all
+    pkgs.simple-completion-language-server
     pkgs.taplo
     pkgs.typst
     pkgs.tinymist
