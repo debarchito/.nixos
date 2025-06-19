@@ -19,6 +19,7 @@
     pkgs.deno
     pkgs.devenv
     pkgs.distrobox
+    pkgs.bottles
     pkgs.blender
     pkgs.easyeffects
     pkgs.external.snippets-ls
@@ -26,6 +27,7 @@
     pkgs.ffmpeg
     pkgs.ferium
     pkgs.foliate
+    pkgs.gearlever
     pkgs.inkscape
     pkgs.inotify-tools
     pkgs.jq
@@ -61,6 +63,7 @@
     pkgs.unrar
     pkgs.vscode-langservers-extracted
     pkgs.wget
+    pkgs.warehouse
     pkgs.wl-clipboard
     pkgs.youtube-music
     pkgs.yaml-language-server

@@ -9,11 +9,7 @@
         location = "https://flathub.org/repo/flathub.flatpakrepo";
       }
     ];
-    packages = [
-      "com.usebottles.bottles"
-      "it.mijorus.gearlever"
-      "io.github.flattool.Warehouse"
-    ];
+    packages = [ ];
     update.auto.enable = true;
     update.auto.onCalendar = "daily";
   };
