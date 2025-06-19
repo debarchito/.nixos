@@ -42,6 +42,8 @@
     preferAbbrs = true;
     shellAbbrs = {
       cd = "z";
+      gc = "git commit -S";
+      gcl = "git clone";
     };
     functions = {
       run = ''
