@@ -8,6 +8,7 @@
       window-padding-x = 10;
       font-family = "Maple Mono NF";
       font-size = 14;
+      font-feature = "-calt, -liga, -dlig";
     };
   };
 }
