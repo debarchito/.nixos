@@ -116,6 +116,7 @@
         "gfx.webrender.all" = true;
         "widget.gtk.non-native-titlebar-buttons.enabled" = true;
         "widget.gtk.titlebar-action-middle-click-enabled" = true;
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
       };
       userChrome = builtins.readFile ./librewolf/userChrome.css;
       userContent = builtins.readFile ./librewolf/userContent.css;
