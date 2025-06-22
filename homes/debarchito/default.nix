@@ -30,6 +30,7 @@
     pkgs.foliate
     pkgs.fish-lsp
     pkgs.gearlever
+    pkgs.haruna
     pkgs.inkscape
     pkgs.inotify-tools
     pkgs.jq
@@ -67,7 +68,6 @@
     pkgs.unrar
     pkgs.vscode-langservers-extracted
     pkgs.wget
-    pkgs.warehouse
     pkgs.wl-clipboard
     pkgs.youtube-music
     pkgs.yaml-language-server
