@@ -30,7 +30,6 @@
     pkgs.foliate
     pkgs.fish-lsp
     pkgs.gearlever
-    pkgs.haruna
     pkgs.inkscape
     pkgs.inotify-tools
     pkgs.jq
@@ -50,7 +49,6 @@
     pkgs.nixfmt-rfc-style
     pkgs.nix-output-monitor
     pkgs.obsidian
-    pkgs.protonplus
     pkgs.pika-backup
     pkgs.prismlauncher
     pkgs.podman-compose
@@ -67,7 +65,6 @@
     pkgs.unzip
     pkgs.unrar
     pkgs.vscode-langservers-extracted
-    pkgs.wget
     pkgs.wl-clipboard
     pkgs.youtube-music
     pkgs.yaml-language-server
@@ -76,7 +73,6 @@
     # fonts
     pkgs.maple-mono.NF
     pkgs.noto-fonts-cjk-sans
-    pkgs.nerd-fonts.jetbrains-mono
   ];
 
   # Fontconfig stuff.
