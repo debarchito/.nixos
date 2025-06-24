@@ -20,10 +20,6 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    yazi = {
-      url = "github:sxyazi/yazi?rev=917fee939f23b00a6ea6180f74f7f0e76afc56f9";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +36,6 @@
           inputs.helix.overlays.default
           inputs.nur.overlays.default
           inputs.nix-alien.overlays.default
-          inputs.yazi.overlays.default
         ];
       };
       treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
