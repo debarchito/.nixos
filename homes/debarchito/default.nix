@@ -17,7 +17,6 @@
     pkgs.aseprite
     pkgs.codebook
     pkgs.deno
-    pkgs.devenv
     pkgs.distrobox
     (pkgs.bottles.override {
       removeWarningPopup = true;
