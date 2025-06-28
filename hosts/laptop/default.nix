@@ -81,9 +81,6 @@
     pkgs.kdePackages.kate
   ];
 
-  # Niri
-  programs.niri.enable = true;
-
   # Graphics stuff.
   graphics.enable = true;
   graphics.nvidia.enable = true;
