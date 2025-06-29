@@ -56,6 +56,7 @@
     pkgs.ripgrep
     pkgs.ryubing
     pkgs.ripgrep-all
+    pkgs.signal-desktop
     pkgs.simple-completion-language-server
     pkgs.taplo
     pkgs.typst
@@ -102,7 +103,6 @@
     ./gpg.nix
     ./git.nix
     ./helix.nix
-    ./niri.nix
     ./nushell.nix
     ./obs-studio.nix
     ./starship.nix
